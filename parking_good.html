@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Encoding -->
+  <meta charset="utf-8">
+  <title>Parking page</title>
+  <!-- Viewports allow for dynamic design and sizes depending on the device-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link the style sheet -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- Google map javascripts -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGSPLUeIQq8VKZUD9dkXDGYwA7ggOhPJU&callback=initMap"></script>
+  <script type=text/javascript src="google-maps.js"></script>
+</head>
+
+<body onload="setTimeout(updateMapPosition(43.2620,-79.92),3000)">
+
+  <!-- Navigation menu -->
+  <header>
+    <ul class="topnav">
+      <li>
+        <a href="#"><img src="img/earth-globe.svg" alt="Home" title="Home" class="scale" /></a>
+      </li>
+
+      <li>
+        <a href="search.html">Search</a>
+      </li>
+
+      <li>
+        <a href="submission.html">Parking Submission</a>
+      </li>
+
+      <li>
+        <a href="register.html">Register</a>
+      </li>
+
+      <li>
+        <a href="parking.html">Parking</a>
+      </li>
+
+      <li>
+        <a href="results.html">Search Results</a>
+      </li>
+
+
+    </ul>
+  </header>
+
+  <div class="title-rating-container">
+    <h1>Good Parking </h1>
+    <h1 class="price-value">$200</h1>
+  </div>
+  <h2 class="rating-container">Rating: <span class="rating-good">5/5</span></h2>
+  <h2 class="location"> Latitude: 43.2620, Longitude: -79.92</h2>
+  <hr />
+  <div id="map" class="center"></div>
+  <hr />
+  <h2>Parking Description</h2>
+  <p class="flex-text">
+    Description Description Description Description
+    Description Description Description Description
+    Description Description Description Description
+    Description Description Description Description
+    Description Description Description Description
+    Description Description Description Description
+    Description Description Description Description
+    Description Description Description Description
+    Description Description Description Description
+    Description Description Description Description
+  </p>
+  <Hr>
+  <h2>Reviews</h2>
+  <div class="review-container">
+    <h3 class="reviewer">FirstName LastName:</h3>
+    <h3><span class="rating-okay">5/5 </span>Amazazing</h3>
+    <p>
+      Its cool
+    </p>
+  </div>
+
+  <div class="review-container">
+    <h3 class="reviewer">FirstName LastName:</h3>
+    <h3><span class="rating-okay">5/5 </span> Meh</h3>
+
+  </div>
+</body>
+
+</html>

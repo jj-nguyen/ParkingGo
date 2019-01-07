@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+  font-family: "Lucida Console";
+  font-size: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: #363b4e;
+}
+
+header {
+  margin: 1em;
+}
+
+/* Navigation for the top */
+/* For large screens */
+.topnav {
+  /* Navigation menu is always at the top */
+  top: 0px;
+  /* No buffer space from top */
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+  /* Row wraps down when there is no space */
+  flex-flow: row wrap;
+  background-color: #563947;
+  /* Navigation menu takes stretches the entire width of the screen */
+  width: 100%;
+  /* Shadow graphics for navigation menu */
+  -webkit-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.12);
+  /* Flex displays for different types of browsers */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  /* Small screens change flex item direction to vertical instead of horizontal*/
+}
+.topnav ul {
+  /* No bullet points */
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+}
+.topnav li {
+  display: inline-block;
+  background-color: #563947;
+  color: #cd626a;
+  vertical-align: middle;
+}
+.topnav li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em;
+  color: #cd626a;
+}
+.topnav li a:hover {
+  color: #d4e7c2;
+  transition-duration: 0.5s;
+}
+@media (max-width: 500px) {
+  .topnav {
+    flex-direction: column;
+  }
+}
+
+hr {
+  border: none;
+  background-color: #cd626a;
+  height: 1px;
+  opacity: 0.3;
+  margin: 1em;
+}
+
+h1 {
+  color: #cd626a;
+  font-size: 120%;
+  background-color: #563947;
+  margin: 1em;
+  padding: 1em;
+}
+h1 a {
+  color: #cd626a;
+  text-decoration: underline;
+}
+h1 a:hover {
+  color: #d4e7c2;
+  transition-duration: 1s;
+}
+
+h2 {
+  color: #e8ac90;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+h3 {
+  color: #e8ac90;
+}
+
+.location {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.rating-container {
+  float: right;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+.price-value {
+  color: #d4e7c2;
+}
+
+/* Different ratings have different colors */
+.rating-good {
+  color: #d4e7c2;
+}
+
+.rating-okay {
+  color: #e7e5c2;
+}
+
+.rating-bad {
+  color: #e7cdc2;
+}
+
+.title-rating-container {
+  /* Flex display to make 2 items on opposite ends of the window */
+  display: inline-flex;
+  /* Make width of container extend the entire width of the window */
+  width: 100%;
+  /* Evenly spaced items */
+  justify-content: space-between;
+}
+
+.flex-text {
+  display: flex;
+  margin: 1em;
+  padding: 1em;
+  color: #cd626a;
+  border-color: #cd626a;
+}
+
+/* Allows image to stretch based on window */
+.flexible {
+  display: block;
+  object-fit: cover;
+  /* Resize picture for smaller screens */
+}
+@media (max-width: 700px) {
+  .flexible {
+    width: 35%;
+    height: auto;
+  }
+}
+
+/* Scales image to text height */
+.scale {
+  border: 0;
+  width: 1em;
+  height: 1em;
+}
+
+/* Place elment in the center */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form label {
+  display: block;
+  color: #cd626a;
+}
+
+form label.center {
+  text-align: center;
+}
+
+.login-form-item {
+  display: inline-block;
+  margin: 1em;
+  background-color: #363b4e;
+  color: #cd626a;
+  border: none;
+  cursor: pointer;
+}
+.login-form-item:hover {
+  transition-duration: 1s;
+  background-color: #60698a;
+}
+.login-form-item:focus {
+  transition-duration: 1s;
+  background-color: #363b4e;
+}
+
+.form-item {
+  display: block;
+  background-color: #563947;
+  color: #cd626a;
+  border: none;
+  width: 30%;
+  padding: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  /* Form items take up more of the screen on smaller screens */
+}
+@media (max-width: 500px) {
+  .form-item {
+    width: 80%;
+  }
+}
+
+input[type=button] {
+  white-space: normal;
+}
+
+.file-upload {
+  cursor: pointer;
+}
+
+/* On hover change background color to a lighter shade */
+.form-item:hover {
+  transition-duration: 1s;
+  background-color: #93627a;
+}
+
+/* On focus change color back to original background color */
+.form-item:focus {
+  transition-duration: 1s;
+  background-color: #563947;
+}
+
+input:placeholder-shown {
+  border: 0px;
+}
+
+input:invalid {
+  border: 2px solid red;
+  opacity: 0.5;
+  transition-duration: 1s;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1em;
+  height: auto;
+}
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+table, th, td, tr {
+  border: 1px solid #cd626a;
+  color: #cd626a;
+}
+
+th {
+  padding: 1em;
+}
+
+/* Even and odd rows have different colors within the table */
+tr:nth-child(odd) {
+  background-color: #563947;
+}
+
+tr:nth-child(even) {
+  background-color: #363b4e;
+}
+
+/* Change the entire row's color when hovering on the table */
+tbody tr:hover {
+  background-color: #d4e7c2;
+  transition-duration: 1s;
+}
+
+/* Styling for entire table cell */
+td a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  color: #cd626a;
+  text-decoration: none;
+}
+
+.review-container {
+  display: block;
+  /* Make the reviews stand out a bit by lightening the background*/
+  background-color: #3a4054;
+  color: #cd626a;
+  margin: 1em;
+  padding: 1em;
+}
+
+h3.reviewer {
+  color: #cd626a;
+}
+
+#map {
+  height: 400px;
+  width: 80%;
+}
+@media (max-width: 500px) {
+  #map {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
